@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "anchiale",
+  "version": "${version}",
+
+  "name": "Anchiale",
+  "description": "Mod that removes the freeze/crash when leaving a world in 1.8",
+  "authors": [
+    "Void_X_Walker"
+  ],
+
+  "license": "MIT",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.voidxwalker.anchiale.Main"
+    ]
+  },
+  "mixins": [
+    "anchiale.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.1"
+  }
+}

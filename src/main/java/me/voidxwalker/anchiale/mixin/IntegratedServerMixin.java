@@ -18,7 +18,7 @@ public abstract class IntegratedServerMixin<V>  extends MinecraftServer {
     public IntegratedServerMixin(Proxy proxy, File file) {
         super(proxy, file);
     }
-    @Redirect(method = "stopRunning", at = @At(value = "INVOKE", target = "Lcom/google/common/util/concurrent/Futures;getUnchecked(Ljava/util/concurrent/Future;)Ljava/lang/Object;"))
+    @Redirect(method = "stopRunning", at = @At(value = "INVOKE", target = "Lcom/google/common/util/concurrent/Futures;getUnchecked(Ljava/util/concurrent/Future;)Ljava/lang/Object;", remap = false))
     public <V> V e(Future<V> e){
         List<ServerPlayerEntity> list = Lists.newArrayList(getPlayerManager().getPlayers());
 
